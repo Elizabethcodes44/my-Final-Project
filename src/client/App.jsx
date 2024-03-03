@@ -1,6 +1,6 @@
-import Home from "./client/Components/Home.jsx";
-import Header from "./client/Components/Header.jsx";
-import Footer from "./client/Components/Footer.jsx";
+import Home from "./Components/Home.jsx";
+import Header from "./Components/Header.jsx";
+import Footer from "./Components/Footer.jsx";
 
 import "./App.css";
 
