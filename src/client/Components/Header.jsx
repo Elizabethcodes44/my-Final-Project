@@ -1,5 +1,5 @@
 import "./Header.css";
-import logo from "../../public/favicon.png";
+import logo from "/favicon.png";
 function Header() {
   return (
     <header>

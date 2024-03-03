@@ -8,15 +8,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
-  background: linear-gradient(
-    to top,
-    #ffcccb,
-    #ffb3b3,
-    #ff99cc,
-    #f2f2ff,
-    #ffffff
-  );
-  
+  background-color: #ffb6c1;
+  /* Linear gradient from top to bottom */
+  background-image: linear-gradient(to bottom, #ffb6c1, #ff69b4);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
 }
 
 .app-Container {
@@ -25,16 +22,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 90px 1fr 100px;
-  
 }
 .app-Container:hover {
-  background: linear-gradient(
-    to bottom,
-    #ffcccb,
-    #ffb3b3,
-    #ff99cc,
-    #f2f2ff,
-    #ffffff
-  );
-  
+  background-image: linear-gradient(to top, #ffb6c1, #ff69b4);
 }

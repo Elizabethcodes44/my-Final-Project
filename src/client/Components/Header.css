@@ -1,9 +1,8 @@
 .header {
- 
-  border-bottom: 1px solid #000;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  
 }
 .header_left {
   display: flex;
@@ -18,9 +17,11 @@
 }
 .header_left > h2 {
   font-size: 30px;
-  color: black;
-  font-style:italic;
+
+  font-style: italic;
+  
 }
+
 .header_center {
   display: flex;
   justify-content: center;
@@ -31,29 +32,25 @@
   justify-content: center;
   align-items: center;
 }
-.header_list > li{
-    list-style-type: none;
-    padding: 15px;
-    background-color: black;
-    color: white;
-    font-style: italic;
-    
+.header_list > li {
+  list-style-type: none;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  
 }
 .header_list > li:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-.header_right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header_right > button {
-    
-    padding: 10px;
-    background-color: white;
-    font-size: 20px;
-    margin-inline:10px;
-    font-style: italic;
-
+  padding: 10px;
+  background-color: white;
+  font-size: 15px;
+  margin-inline: 10px;
+  
 }
-
