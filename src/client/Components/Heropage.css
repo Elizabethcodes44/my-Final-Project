@@ -13,9 +13,11 @@
   
   .image > img {
     width: 100%; /* Image takes full width of its container */
-    height: 500px; /* Maintain aspect ratio */
+    height: 660px; /* Maintain aspect ratio */
   
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right:30px;
   }
   
   .herotext {
