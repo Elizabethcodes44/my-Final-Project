@@ -1,25 +1,31 @@
+header {
+  
+  padding: 20px;
+}
 .header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  
+  color: white;
 }
 .header_left {
   display: flex;
-  justify-content: center;
   align-items: center;
+  
+}
+.header_left {
+  margin-right: auto;
 }
 .header_left > img {
-  height: 80px;
-  width: 80px;
+  height: 120px;
+  width: 120px;
   border-radius: 50px;
   padding: 5px;
 }
 .header_left > h2 {
   font-size: 30px;
-
-  font-style: italic;
-  
+  font-weight: bold;
+  font-style: 
 }
 
 .header_center {
@@ -35,22 +41,12 @@
 .header_list > li {
   list-style-type: none;
   padding: 15px;
-  background-color: black;
   color: white;
-  
+  font-size: 20px;
+  font-weight: bold;
 }
 .header_list > li:hover {
   cursor: pointer;
+  color: fuchsia;
 }
-.header_right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header_right > button {
-  padding: 10px;
-  background-color: white;
-  font-size: 15px;
-  margin-inline: 10px;
-  
-}
+

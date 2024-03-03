@@ -1,0 +1,42 @@
+.hero-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    border-radius: 30px;
+    
+  }
+  
+  .image {
+    flex: 1; /* Equal width to the text */
+  }
+  
+  .image > img {
+    width: 100%; /* Image takes full width of its container */
+    height: 500px; /* Maintain aspect ratio */
+  
+    padding: 30px;
+  }
+  
+  .herotext {
+    flex: 1; /* Equal width to the image */
+    padding: 50px; /* Add padding for spacing */
+    border: 6px solid white;}
+.herotext > h3 {
+    color: fuchsia;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.herotext > p{
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+
+}
+.herotext > h5 {
+    font-weight: bold;
+    font-size: 20px;
+    color: fuchsia;
+}
+  
