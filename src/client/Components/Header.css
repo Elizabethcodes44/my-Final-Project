@@ -49,6 +49,10 @@
 }
 .header_list > li:hover {
   cursor: pointer;
+  color: fuchsia;
+}
+.header_list .active {
+  cursor: pointer;
   color:fuchsia;
 }
 

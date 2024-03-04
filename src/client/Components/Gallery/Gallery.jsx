@@ -11,7 +11,7 @@ const IMAGES = [picture1, picture2];
 function Gallery() {
   return (
     <>
-      <div className="Gallery_container">
+      <div className="Gallery_container" id="gallery">
         <div className="overflow-hidden relative">
           <div className="w-[40%]  m-auto pt-11 pb-11">
             <Imageslider IMAGES={IMAGES} />

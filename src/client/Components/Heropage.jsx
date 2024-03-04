@@ -4,7 +4,7 @@ import image from "../../../assets/heropage2.jpg";
 function Heropage() {
   return (
     <>
-      <div className="hero-page">
+      <div className="hero-page" id="hero">
         <div className="image">
           <img className="women_mount" src={image} alt="hero page image" />
         </div>
