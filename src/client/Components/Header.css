@@ -1,12 +1,14 @@
-header {
-  
-  padding: 20px;
-}
 .header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   color: white;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  padding: 20px;
 }
 .header_left {
   display: flex;
@@ -25,7 +27,7 @@ header {
 .header_left > h2 {
   font-size: 30px;
   font-weight: bold;
-  font-style: 
+
 }
 
 .header_center {
@@ -47,6 +49,6 @@ header {
 }
 .header_list > li:hover {
   cursor: pointer;
-  color: fuchsia;
+  color:fuchsia;
 }
 
