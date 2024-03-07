@@ -1,11 +1,9 @@
-import { useState } from "react";
+
 import "./Header.css";
 import logo from "/favicon.png";
 import { Link } from "react-scroll";
 function Header() {
-  const [click, setClick] = useState(false);
-
-  const closeMenu = () => setClick(false);
+  
   return (
     <>
       <header>
@@ -24,22 +22,9 @@ function Header() {
                   smooth={true}
                   offset={-150}
                   duration={500}
-                  onClick={closeMenu}
+                  
                 >
                   HOME
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link
-                  to="about"
-                  spy={true}
-                  smooth={true}
-                  offset={-150}
-                  duration={500}
-                  onClick={closeMenu}
-                >
-                  ABOUT US
                 </Link>
               </li>
               <li>
@@ -50,7 +35,7 @@ function Header() {
                   smooth={true}
                   offset={-150}
                   duration={500}
-                  onClick={closeMenu}
+                  
                 >
                   HEALTH
                 </Link>
@@ -63,21 +48,20 @@ function Header() {
                   smooth={true}
                   offset={-150}
                   duration={500}
-                  onClick={closeMenu}
+                  
                 >
                   COURSES
                 </Link>
               </li>
-
               <li>
                 {" "}
                 <Link
                   to="gallery"
                   spy={true}
                   smooth={true}
-                  offset={-190}
+                  offset={-160}
                   duration={500}
-                  onClick={closeMenu}
+                  
                 >
                   GALLERY
                 </Link>
@@ -85,12 +69,29 @@ function Header() {
               <li>
                 {" "}
                 <Link
-                  to="contact"
+                  to="about"
                   spy={true}
                   smooth={true}
                   offset={-150}
                   duration={500}
-                  onClick={closeMenu}
+                  
+                >
+                  ABOUT US
+                </Link>
+              </li>
+              
+              
+
+              
+              <li>
+                {" "}
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-300}
+                  duration={500}
+                  
                 >
                   CONTACT US
                 </Link>

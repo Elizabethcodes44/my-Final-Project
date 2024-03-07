@@ -13,7 +13,7 @@
   
   .image > img {
     width: 100%; /* Image takes full width of its container */
-    height: 660px; /* Maintain aspect ratio */
+    height: 515px; /* Maintain aspect ratio */
   
     padding-top: 30px;
     padding-bottom: 30px;
@@ -25,7 +25,7 @@
     padding: 50px; /* Add padding for spacing */
     border: 6px solid white;}
 .herotext > h3 {
-    color:fuchsia;
+    color:pink;
     font-size: 30px;
     font-weight: bold;
 
@@ -39,6 +39,6 @@
 .herotext > h5 {
     font-weight: bold;
     font-size: 20px;
-    color: fuchsia;
+    color: pink;
 }
   

@@ -9,6 +9,7 @@
   background-color: black;
   width: 100%;
   padding: 20px;
+  border-bottom: 6px solid white;
 }
 .header_left {
   display: flex;
@@ -49,10 +50,10 @@
 }
 .header_list > li:hover {
   cursor: pointer;
-  color: fuchsia;
+  color: pink
 }
 .header_list .active {
   cursor: pointer;
-  color:fuchsia;
+  color:pink
 }
 
