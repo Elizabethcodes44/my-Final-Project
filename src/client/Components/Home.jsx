@@ -5,6 +5,7 @@ import Gallery from "./Gallery/Gallery.jsx"
 import About from "./About.jsx";
 import Courses from "./Courses.jsx";
 
+
 function Main() {
     return(
         <>
@@ -14,6 +15,7 @@ function Main() {
             <Courses></Courses>
             <Gallery></Gallery>
             <About></About>
+            
             
             
         </main>
