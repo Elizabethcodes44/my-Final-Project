@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import './Courses.css'; // Importing the CSS file
+import video from "../../../assets/video.mp4"
 
 // Define the quiz questions and their corresponding career paths
 const quizQuestions = [
@@ -42,12 +43,12 @@ const Courses = () => {
   return (
     <div id = "courses" className='course_Container'>
       {showResult ? (
-        <div>
+        <div className='course_content'>
           <h2>Recommended Career Path: Cybersecurity</h2>
           <p>Here are some free resources to get started:</p>
           <ul>
             <li><a href="https://example.com">Free Cybersecurity Course 1</a></li>
-            <li><a href="https://example.com">Free Cybersecurity Course 2</a></li>
+            <li><a href="https://www.freecodecamp.org/news/front-end-developer-roadmap/">Free front end Course 2</a></li>
             {/* Add more links as needed */}
           </ul>
           <button onClick={resetQuiz}>Take Quiz Again</button>
@@ -65,6 +66,12 @@ const Courses = () => {
           <button onClick={handleNextQuestion}>Next Question</button>
         </div>
       )}
+       <div className="course_video">
+    <video controls>
+      <source src={video} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
     </div>
   );
 };

@@ -19,5 +19,17 @@ model User {
   password    String
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
+  trackers Tracker[]
 }
 
+model Tracker {
+   id          Int         @id @default(autoincrement())
+  weight    Int     
+  bloodPressure Int     
+  fetalMovements       String     
+  feelings   String
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  userId    Int   @unique      
+  user      User    @relation(fields: [userId], references: [id])
+}

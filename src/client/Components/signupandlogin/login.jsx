@@ -1,5 +1,4 @@
 import './login.css'
-import "./signup.css";
 import { useState } from "react";
 
 export default function logInForm({ handleSubmit }) {
@@ -22,15 +21,19 @@ export default function logInForm({ handleSubmit }) {
   return (
     <>
       /
-      <div className="signupform">
-        <form onSubmit={handleSubmitDecorator}>
+      <div className="logincontainer">
+        <form className="loginform"onSubmit={handleSubmitDecorator}>
+          <h2>log-in</h2>
+          <label>e-mail
           <input
             type="text"
             name="email"
-            placeholder="email"
+            placeholder="enter your email"
             value={logIn.email}
             onChange={handleChange}
           />
+          </label>
+          <label> password
           <input
             type="password"
             name="password"
@@ -38,6 +41,7 @@ export default function logInForm({ handleSubmit }) {
             value={logIn.password}
             onChange={handleChange}
           />
+          </label>
           <button type="submit">Submit</button>
         </form>
       </div>

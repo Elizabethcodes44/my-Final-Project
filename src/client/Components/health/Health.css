@@ -1,0 +1,68 @@
+.healthContainer {
+  color: black;
+  background-color: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.pregnancyDate {
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.pregnancyDate > div {
+  flex: 1;
+}
+
+.calculator > h2 {
+  color: rgb(0, 213, 255);
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.calculator > h4 { 
+  font-size: 15px;
+}
+
+.form-container {
+  max-width: 400px;
+}
+
+.form-container > label {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form-container > input {
+  border: 6px solid black;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.form-container > button {
+  background-color: black;
+  color: white;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  color: fuchsia;
+}
+
+.result:hover {
+  color: blue;
+}
+
+.healthContainer img {
+  max-width: 100%;
+  height: auto;
+}

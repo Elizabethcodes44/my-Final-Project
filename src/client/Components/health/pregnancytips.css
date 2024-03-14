@@ -1,0 +1,59 @@
+/* pregnancytips.css */
+
+/* Container styling */
+.tips_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: cadetblue;
+    color: white;
+    animation: slideInFromLeft 1s ease-in-out;
+    margin-top: 50px;
+}
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Paragraph styling */
+.tips_container p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: white; /* Text color */
+}
+
+/* Headings styling */
+.tips_container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black; /* Heading color */
+    margin-bottom: 20px;
+}
+
+/* List styling */
+.tips_container ul {
+    margin-left: 20px;
+}
+
+.tips_container li {
+    margin-bottom: 10px;
+}
+
+/* Link styling */
+.tips_container a {
+    color: black; /* Link color */
+    text-decoration: underline;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.tips_container a:hover {
+    color: whitesmoke; /* Link hover color */
+}
