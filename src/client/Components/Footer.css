@@ -1,6 +1,23 @@
 .footer {
-    color: white;
-    border-top: 6px solid white;
-    
-
-}
+   
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Align the content to the center */
+  }
+  
+  .footer h1 {
+    margin-top: 50px;
+    font-size: 24px; /* Font size for the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+  }
+  
+  .social-icons {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .social-icons img {
+    width: 40px; /* Size of the social media icons */
+    margin: 0 10px; /* Spacing between the icons */
+  }
+  

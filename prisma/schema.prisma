@@ -28,6 +28,8 @@ model Tracker {
   bloodPressure Int     
   fetalMovements       String     
   feelings   String
+  lastAppointment DateTime?
+  nextAppointment DateTime?
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   userId    Int   @unique      

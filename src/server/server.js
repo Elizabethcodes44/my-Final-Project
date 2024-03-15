@@ -21,8 +21,9 @@ app.use(express.urlencoded({ extended: true }));
 // server.js
 import registerRouter from './routers/user.js';
 
-
+import trackerRouter from './routers/tracker.js';
 app.use('/user', registerRouter);
+app.use('/health', trackerRouter);
 
 
 

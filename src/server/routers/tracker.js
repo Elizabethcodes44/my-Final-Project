@@ -1,8 +1,8 @@
 // trackerRouter.js
 import express from 'express';
-import {getTracker, createTracker} from '../controllers/tracker.js'
+import {getAllTrackers, createTracker} from '../controllers/tracker.js'
 const router = express.Router();
-router.get('/tracker',getTracker)
+router.get('/tracker',getAllTrackers)
 router.post('/tracker',createTracker);
 
 export default router;
