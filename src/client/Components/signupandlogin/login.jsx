@@ -1,8 +1,9 @@
-import './login.css'
-import { useState } from "react";
+// LogInForm.jsx
+import './login.css';
+import { useState } from 'react';
 
-export default function logInForm({ handleSubmit }) {
-  const [logIn, setLogIn] = useState({ email: "", password: "" });
+export default function LogInForm({ handleSubmit}) {
+  const [logIn, setLogIn] = useState({ email: '', password: '' });
 
   const handleSubmitDecorator = (e) => {
     e.preventDefault();
@@ -20,29 +21,31 @@ export default function logInForm({ handleSubmit }) {
 
   return (
     <>
-      /
       <div className="logincontainer">
-        <form className="loginform"onSubmit={handleSubmitDecorator}>
+        <form className="loginform" onSubmit={handleSubmitDecorator}>
           <h2>log-in</h2>
-          <label>e-mail
-          <input
-            type="text"
-            name="email"
-            placeholder="enter your email"
-            value={logIn.email}
-            onChange={handleChange}
-          />
+          <label>
+            e-mail
+            <input
+              type="text"
+              name="email"
+              placeholder="enter your email"
+              value={logIn.email}
+              onChange={handleChange}
+            />
           </label>
-          <label> password
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={logIn.password}
-            onChange={handleChange}
-          />
+          <label>
+            password
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={logIn.password}
+              onChange={handleChange}
+            />
           </label>
           <button type="submit">Submit</button>
+          
         </form>
       </div>
     </>

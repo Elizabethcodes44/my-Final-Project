@@ -1,12 +1,13 @@
-import "./signup.css";
-import { useState } from "react";
+// SignUpForm.jsx
+import './signup.css';
+import { useState } from 'react';
 
-export default function SignUpForm({ handleSubmit }) {
+export default function SignUpForm({ handleSubmit}) {
   const [signUp, setSignUp] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
   });
 
   const handleSubmitDecorator = (e) => {
@@ -52,7 +53,7 @@ export default function SignUpForm({ handleSubmit }) {
               placeholder="lastname"
               onChange={handleChange}
               required
-            ></input>
+            />
           </label>
           <label>
             email
@@ -77,6 +78,7 @@ export default function SignUpForm({ handleSubmit }) {
             />
           </label>
           <button type="submit">Submit</button>
+          
         </form>
       </div>
     </>

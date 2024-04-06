@@ -7,7 +7,7 @@ export default function HealthTrackerForm({ handleSubmit }) {
     bloodPressure: 0,
     fetalMovements: "",
     feelings: "",
-    lastAppointment: "",
+   lastAppointment: "",
     nextAppointment: "",
   });
 
@@ -66,20 +66,22 @@ export default function HealthTrackerForm({ handleSubmit }) {
             value={tracker.feelings}
             onChange={handleChange}
           />
-          <label>last Appointment Date</label>
+         <label>last Appointment Date</label>
           <input
             type="date"
             name="lastAppointment"
+            placeholder="day-month-year"
             value={tracker.lastAppointment}
             onChange={handleChange}
           />
-          <label>next Appointment Date</label>
+         <label>next Appointment Date</label>
           <input
             type="date"
             name="nextAppointment"
+            placeholder="day-month-year"
             value={tracker.nextAppointment}
             onChange={handleChange}
-          />
+  /> 
 
           <button type="submit">Track my health</button>
         </form>

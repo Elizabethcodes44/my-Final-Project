@@ -7,12 +7,13 @@ import SignUpForm from "./Components/signupandlogin/signup.jsx";
 
 import "./App.css";
 
-const port = import.meta.env.VITE_PORT;
-const apiUrl = `http://localhost:${port}`;
+
+const apiUrl = `https://sheleadsserverrepo-production.up.railway.app`;
 
 function App() {
   const [isSignedUp, setIsSignedUp] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
 
   const handleRegister = async ({ firstName, lastName, email, password }) => {
     const createdRegister = await fetch(`${apiUrl}/user/signup`, {
@@ -41,6 +42,7 @@ function App() {
     // Assuming successful login, set isLoggedIn to true
     setIsLoggedIn(true);
   };
+  
 
   return (
     <div className="app-Container">
