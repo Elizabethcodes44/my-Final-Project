@@ -14,7 +14,7 @@ function App() {
   const [userId, setUserId] = useState(null);
   const [isSignedUp, setIsSignedUp] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
+  const [showSignUp, setShowSignUp] = useState(true); 
 
   const handleRegister = async ({ firstName, lastName, email, password }) => {
     const createdRegister = await fetch(`${apiUrl}/user/signup`, {
@@ -45,18 +45,28 @@ function App() {
     
   };
   
+  const switchToSignUp = () => {
+    setShowSignUp(true); // Show sign-up form
+  };
 
+  const switchToLogin = () => {
+    setShowSignUp(false); // Show login form
+  };
   return (
     <div className="app-Container">
       <Header />
       
       {!isLoggedIn ? (
         isSignedUp ? (
-          <LogInForm handleSubmit={handleLogin} />
+          showSignUp ?(
+          <SignUpForm handleSubmit={handleRegister} switchToLogin={switchToLogin}/>
         ) : (
-          <SignUpForm handleSubmit={handleRegister} />
+          <LogInForm handleSubmit={handleLogin} switchToSignUp={switchToSignUp} />
         )
       ) : (
+        <SignUpForm handleSubmit={handleRegister} switchToLogin={switchToLogin} />
+      )
+    ) : (
         <>
           <Home  userId= {userId}/>
           <Footer />

@@ -2,7 +2,7 @@
 import './signup.css';
 import { useState } from 'react';
 
-export default function SignUpForm({ handleSubmit}) {
+export default function SignUpForm({ handleSubmit, switchToLogin}) {
   const [signUp, setSignUp] = useState({
     firstName: '',
     lastName: '',
@@ -78,6 +78,7 @@ export default function SignUpForm({ handleSubmit}) {
             />
           </label>
           <button type="submit">Submit</button>
+          <button onClick={switchToLogin}>Log In</button>
           
         </form>
       </div>
