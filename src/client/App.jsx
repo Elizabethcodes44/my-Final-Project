@@ -11,10 +11,9 @@ import "./App.css";
 const apiUrl = `https://sheleadsserverrepo-production.up.railway.app`;
 
 function App() {
-  const [userId, setUserId] = useState(null);
   const [isSignedUp, setIsSignedUp] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showSignUp, setShowSignUp] = useState(true); 
+  
 
   const handleRegister = async ({ firstName, lastName, email, password }) => {
     const createdRegister = await fetch(`${apiUrl}/user/signup`, {
@@ -42,33 +41,22 @@ function App() {
     localStorage.setItem("token", logInToken.data);
     // Assuming successful login, set isLoggedIn to true
     setIsLoggedIn(true);
-    
   };
   
-  const switchToSignUp = () => {
-    setShowSignUp(true); // Show sign-up form
-  };
 
-  const switchToLogin = () => {
-    setShowSignUp(false); // Show login form
-  };
   return (
     <div className="app-Container">
       <Header />
       
       {!isLoggedIn ? (
         isSignedUp ? (
-          showSignUp ?(
-          <SignUpForm handleSubmit={handleRegister} switchToLogin={switchToLogin}/>
+          <LogInForm handleSubmit={handleLogin} />
         ) : (
-          <LogInForm handleSubmit={handleLogin} switchToSignUp={switchToSignUp} />
+          <SignUpForm handleSubmit={handleRegister} />
         )
       ) : (
-        <SignUpForm handleSubmit={handleRegister} switchToLogin={switchToLogin} />
-      )
-    ) : (
         <>
-          <Home  userId= {userId}/>
+          <Home />
           <Footer />
         </>
       )}
