@@ -11,6 +11,7 @@ import "./App.css";
 const apiUrl = `https://sheleadsserverrepo-production.up.railway.app`;
 
 function App() {
+  const [userId, setUserId] = useState(null);
   const [isSignedUp, setIsSignedUp] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   
@@ -41,6 +42,7 @@ function App() {
     localStorage.setItem("token", logInToken.data);
     // Assuming successful login, set isLoggedIn to true
     setIsLoggedIn(true);
+    
   };
   
 
@@ -56,7 +58,7 @@ function App() {
         )
       ) : (
         <>
-          <Home />
+          <Home  userId= {userId}/>
           <Footer />
         </>
       )}

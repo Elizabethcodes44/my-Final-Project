@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./healthtracking.css";
 
-export default function HealthTrackerForm({ handleSubmit }) {
+export default function HealthTrackerForm({ handleSubmit , userId}) {
   const [tracker, setTracker] = useState({
     weight: 0,
     bloodPressure: 0,
@@ -13,7 +13,7 @@ export default function HealthTrackerForm({ handleSubmit }) {
 
   const handleSubmitDecorator = (e) => {
     e.preventDefault();
-    handleSubmit(tracker);
+    handleSubmit(tracker, userId);
   };
 
   const handleChange = (e) => {

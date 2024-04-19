@@ -5,7 +5,7 @@ import Pregnancytips from "./prenancytips";
 import { useState, useEffect } from "react";
 
 const apiUrl = `https://sheleadsserverrepo-production.up.railway.app`;
-function Health() {
+function Health({userId}) {
   const [tracker, setTracker] = useState([]);
   useEffect(() => {
     fetch(`${apiUrl}/healthtracker`)
@@ -48,6 +48,7 @@ function Health() {
         feelings,
         lastAppointment,
         nextAppointment,
+        userId
       }),
     };
   
@@ -103,7 +104,7 @@ function Health() {
         </div>
       </div>
       <Pregnancytips></Pregnancytips>
-      <HealthTracker handleSubmit={handleCreateTracker} />
+      <HealthTracker handleSubmit={handleCreateTracker}  userId={userId}/>
       
     </div>
   );
