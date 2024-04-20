@@ -23,7 +23,7 @@ function App() {
       },
       body: JSON.stringify({ firstName, lastName, email, password }),
     });
-    console.log(createdRegister);
+    
     // Assuming successful registration, set isSignedUp to true
     setIsSignedUp(true);
   };
@@ -37,7 +37,7 @@ function App() {
       body: JSON.stringify({ email, password }),
     });
     const logInToken = await verifyLogin.json();
-    console.log(logInToken);
+  
     localStorage.setItem("token", logInToken.data);
     // Assuming successful login, set isLoggedIn to true
     setIsLoggedIn(true);

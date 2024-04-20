@@ -55,7 +55,7 @@ function Health() {
       const data = await fetch(`${apiUrl}/healthtracker`, options);
       if (data.ok) {
         const newTracker = await data.json();
-        console.log(newTracker);
+        
         setTracker([...tracker, newTracker]);
       } else {
         console.error("Failed to create tracker:", data.statusText);
