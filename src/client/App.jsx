@@ -2,9 +2,9 @@ import {useState} from "react";
 import Home from "./Components/Home.jsx";
 import Header from "./Components/Header.jsx";
 import Footer from "./Components/Footer.jsx";
-//import LogInForm from "./Components/signupandlogin/login.jsx";
-//import SignUpForm from "./Components/signupandlogin/signup.jsx";
-import LogInSignUp from "./Components/SignupLogin/signuplogin.jsx";
+import LogInForm from "./Components/signupandlogin/login.jsx";
+import SignUpForm from "./Components/signupandlogin/signup.jsx";
+
 import "./App.css";
 
 
@@ -48,22 +48,20 @@ function App() {
     <div className="app-Container">
       <Header />
       
-      {!isLoggedIn && (
-        <>
-          <LogInSignUp
-            handleRegister={handleRegister}
-            handleLogin={handleLogin}
-          />
-          <Footer />
-        </>
-      )}
-      {isLoggedIn && (
+      {!isLoggedIn ? (
+        isSignedUp ? (
+          <LogInForm handleSubmit={handleLogin} />
+        ) : (
+          <SignUpForm handleSubmit={handleRegister} />
+        )
+      ) : (
         <>
           <Home />
           <Footer />
         </>
       )}
-      </div>
+      
+    </div>
   );
 }
 
