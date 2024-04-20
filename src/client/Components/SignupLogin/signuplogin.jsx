@@ -10,8 +10,6 @@ export default function LogInSignUp({ handleRegister, handleLogin }) {
     password: "",
   });
 
-  const handleSubmit = action === "Sign Up" ? handleRegister : handleLogin;
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -20,17 +18,11 @@ export default function LogInSignUp({ handleRegister, handleLogin }) {
     });
   };
 
-  const submitForm = () => {
+  const handleSubmit = () => {
     if (action === "Sign Up") {
-      handleSubmit(formData); // Pass formData to the handleSubmit function
+      handleRegister(formData); // Call handleRegister with sign up form data
     } else {
-      // Check if all required fields are filled before logging in
-      if (formData.email && formData.password) {
-        handleSubmit(formData);
-      } else {
-        // Show an error message or handle it as per your requirement
-        console.log("Please fill in all required fields.");
-      }
+      handleLogin(formData); // Call handleLogin with login form data
     }
   };
 
@@ -41,37 +33,32 @@ export default function LogInSignUp({ handleRegister, handleLogin }) {
         <div className="underline"></div>{" "}
       </div>
       <div className="inputs">
-        {action === "LogIn" ? (
-          <div></div>
-        ) : (
-          <div className="input">
-            <p>firstname</p>
-            <input
-              type="text"
-              name="firstName"
-              placeholder="firstname"
-              value={formData.firstName}
-              onChange={handleChange}
-              required
-            />
-          </div>
+        {action === "LogIn" ? null : (
+          <>
+            <div className="input">
+              <p>firstname</p>
+              <input
+                type="text"
+                name="firstName"
+                placeholder="firstname"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="input">
+              <p>lastname</p>
+              <input
+                type="text"
+                name="lastName"
+                placeholder="lastname"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </>
         )}
-        {action === "LogIn" ? (
-          <div></div>
-        ) : (
-          <div className="input">
-            <p>lastname</p>
-            <input
-              type="text"
-              name="lastName"
-              placeholder="lastname"
-              value={formData.lastName}
-              onChange={handleChange}
-              required
-            />
-          </div>
-        )}
-
         <div className="input">
           <p>email</p>
           <input
@@ -81,7 +68,7 @@ export default function LogInSignUp({ handleRegister, handleLogin }) {
             value={formData.email}
             onChange={handleChange}
             required
-          />{" "}
+          />
         </div>
         <div className="input">
           <p>password</p>
@@ -100,7 +87,7 @@ export default function LogInSignUp({ handleRegister, handleLogin }) {
           className={action === "LogIn" ? "submit gray" : "submit"}
           onClick={() => {
             setAction("Sign Up");
-            submitForm(); // Call submitForm when the "Sign Up" button is clicked
+            handleSubmit(); // Call handleSubmit when the "Sign Up" button is clicked
           }}
         >
           Sign Up
@@ -109,10 +96,7 @@ export default function LogInSignUp({ handleRegister, handleLogin }) {
           className={action === "Sign Up" ? "submit gray" : "submit"}
           onClick={() => {
             setAction("LogIn");
-            // Directly call submitForm only if action is "Sign Up"
-            if (action === "Sign Up") {
-              submitForm(); // Call submitForm when the "Log In" button is clicked
-            }
+            handleSubmit(); // Call handleSubmit when the "Log In" button is clicked
           }}
         >
           LogIn
