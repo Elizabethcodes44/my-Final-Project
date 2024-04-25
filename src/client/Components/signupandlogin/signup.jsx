@@ -2,7 +2,8 @@
 import './signup.css';
 import { useState } from 'react';
 
-export default function SignUpForm({ handleSubmit, }) {
+export default function SignUpForm({ handleSubmit, setToggleSignUp , toggleSignUp}) {
+  
   const [signUp, setSignUp] = useState({
     firstName: '',
     lastName: '',
@@ -81,6 +82,8 @@ export default function SignUpForm({ handleSubmit, }) {
           
           
         </form>
+        <p onClick ={()=> setToggleSignUp(!toggleSignUp)}>Already have an account </p>
+        
       </div>
     </>
   );

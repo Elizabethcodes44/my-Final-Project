@@ -2,7 +2,7 @@
 import './login.css';
 import { useState } from 'react';
 
-export default function LogInForm({ handleSubmit, }) {
+export default function LogInForm({ handleSubmit,setToggleSignUp , toggleSignUp }) {
   const [logIn, setLogIn] = useState({ email: '', password: '' });
 
   const handleSubmitDecorator = (e) => {
@@ -44,10 +44,11 @@ export default function LogInForm({ handleSubmit, }) {
               onChange={handleChange}
             />
           </label>
-          <button type="submit">Submit</button>
+          <button >Submit</button>
         
           
         </form>
+        <p onClick ={()=> setToggleSignUp(!toggleSignUp)}>Already have an account </p>
       </div>
     </>
   );
