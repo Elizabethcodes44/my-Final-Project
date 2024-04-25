@@ -35,6 +35,7 @@ function Health() {
     feelings,
     lastAppointment,
     nextAppointment,
+    userId,
   }) => {
     const options = {
       method: "POST",
@@ -48,6 +49,7 @@ function Health() {
         feelings,
         lastAppointment,
         nextAppointment,
+        userId,
       }),
     };
   

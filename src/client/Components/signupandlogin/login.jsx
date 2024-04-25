@@ -1,10 +1,12 @@
 // LogInForm.jsx
+
 import './login.css';
-import { useState } from 'react';
+import { useState} from 'react';
+
 
 export default function LogInForm({ handleSubmit,setToggleSignUp , toggleSignUp }) {
   const [logIn, setLogIn] = useState({ email: '', password: '' });
-
+ 
   const handleSubmitDecorator = (e) => {
     e.preventDefault();
     handleSubmit(logIn);
