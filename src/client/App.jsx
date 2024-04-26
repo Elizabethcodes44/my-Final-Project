@@ -1,4 +1,4 @@
-import {useState, createContext} from "react";
+import {useState, createContext, useEffect} from "react";
 import Home from "./Components/Home.jsx";
 import Header from "./Components/Header.jsx";
 import Footer from "./Components/Footer.jsx";
@@ -17,6 +17,8 @@ function App() {
   const [toggleSignUp, setToggleSignUp] = useState(false)
 
 const [userId, setUserId] = useState(null);
+
+
   const handleRegister = async ({ firstName, lastName, email, password }) => {
     const createdRegister = await fetch(`${apiUrl}/user/signup`, {
       method: "POST",
@@ -52,13 +54,20 @@ const [userId, setUserId] = useState(null);
 <div className="app-Container">
       <Header />
       
-      
-      {toggleSignUp ? <LogInForm setToggleSignUp= {setToggleSignUp} toggleSignUp={toggleSignUp} handleSubmit={handleLogin} />: <SignUpForm setToggleSignUp= {setToggleSignUp} toggleSignUp= {toggleSignUp} handleSubmit={handleRegister} />}
+      {!isLoggedIn && (
+        <>
+      {toggleSignUp ? (<LogInForm setToggleSignUp= {setToggleSignUp} toggleSignUp={toggleSignUp} handleSubmit={handleLogin} />
+      ) : (
+      <SignUpForm setToggleSignUp= {setToggleSignUp} toggleSignUp= {toggleSignUp} handleSubmit={handleRegister} />
+      )} 
+      </>
+    )}
+    {isLoggedIn && (
         <>
           <Home />
           <Footer />
         </>
-      
+    )}
       
     </div>
     </formContext.Provider>

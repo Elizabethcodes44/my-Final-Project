@@ -7,7 +7,7 @@ export default function HealthTrackerForm({ handleSubmit }) {
   const userData = JSON.parse(localStorage.getItem("id"));
 
   
-  console.log("this is user data:", userData)
+  
 
   const [tracker, setTracker] = useState({
 
@@ -23,7 +23,6 @@ export default function HealthTrackerForm({ handleSubmit }) {
   const handleSubmitDecorator = (e) => {
     e.preventDefault();
     handleSubmit(tracker);
-    console.log("this is tracker:", tracker);
   };
 
   const handleChange = (e) => {
