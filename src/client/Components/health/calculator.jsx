@@ -22,6 +22,9 @@ export default function Calculator() {
         
          <div className="Calculator" >
       <div className="pregnancyDate">
+      <div className="image">
+          <img src={pregnancy} alt="pregnant woman" />
+        </div>
         <div className="calculator">
           <h2>Pregnancy Due Date Calculator</h2>
           <h4>
@@ -51,9 +54,7 @@ export default function Calculator() {
             </div>
           )}
         </div>
-        <div className="image">
-          <img src={pregnancy} alt="pregnant woman" />
-        </div>
+       
       </div>
       </div>
       
