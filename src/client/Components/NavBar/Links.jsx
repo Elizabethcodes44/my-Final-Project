@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import {  useNavigate, useLocation, Link } from "react-router-dom"; 
+import {  useNavigate, useLocation } from "react-router-dom"; 
 
 const variants = {
   open: {
@@ -48,9 +48,12 @@ export default function Links() {
     <motion.div className="Links" variants={variants}>
       {links.map((item) => (
         <motion.div key={item.name} variants={listVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.5 }}>
-           <div onClick={() => handleLinkClick(item.path)} className={location.pathname === item.path ? "active" : ""}>
+          <a href={item.path} onClick={(e) => {
+            e.preventDefault(); // Prevent default link behavior
+            navigate(item.path); // Navigate to the specified path
+          }} className={location.pathname === item.path ? "active" : ""}>
             {item.name}
-          </div>
+          </a>
         </motion.div>
       ))}
     </motion.div>
