@@ -79,7 +79,7 @@ export default function SignUpForm({ handleSubmit, setToggleSignUp , toggleSignU
             />
           </label>
           <button type="submit">Submit</button>
-          <p>Already have an account ? click on the login button</p>
+          <p>Already have an account ? click on the button below</p>
           <button onClick ={()=> setToggleSignUp(!toggleSignUp)}>Login</button>
           
         </form>
