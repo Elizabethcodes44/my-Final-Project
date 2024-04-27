@@ -38,6 +38,7 @@ const [userId, setUserId] = useState(null);
   };
 
   const handleLogin = async ({ email, password }) => {
+    try {
     const verifyLogin = await fetch(`${apiUrl}/user/login`, {
       method: "POST",
       headers: {
@@ -45,12 +46,23 @@ const [userId, setUserId] = useState(null);
       },
       body: JSON.stringify({ email, password }),
     });
+    if (verifyLogin.ok) {
     const logInToken = await verifyLogin.json();
     setUserId(logInToken.id)
     localStorage.setItem("token", JSON.stringify(logInToken.data));
     localStorage.setItem("id", JSON.stringify(logInToken.id));
     // Assuming successful login, set isLoggedIn to true
-    setIsLoggedIn(true);
+    setIsLoggedIn(true);}
+    else {
+      // Handle unauthorized access or other errors
+      console.error("Login failed:", verifyLogin.statusText);
+      // Display error message to the user or handle the error appropriately
+    }
+  } catch (error) {
+    console.error("An error occurred during login:", error);
+    // Handle other errors such as network issues or server errors
+    // Display error message to the user or handle the error appropriately
+  }
   };
   
 
