@@ -15,14 +15,20 @@
         h1{
             font-size: 90px;
           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-          color: fuchsia
+          color: white;
+          font-weight: lighter;
+          p{
+            font-size:20px;
+            font-style: italic;
+            color:orangered;
+          }
           
            }
            p{
-            font-size: 20px;
+            font-size: 25px;
             letter-spacing: 10px;
             font-family: monospace;
-            
+            color: white;
             
         }
       }  

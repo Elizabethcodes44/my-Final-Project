@@ -7,14 +7,10 @@ function Heropage() {
       <div className="hero-page">
         <div className="wrapper">
           <div className="textContainer">
-            <h1>BUMP TECH</h1>
-            <p>Introducing "BumpTech" – your ultimate pregnancy app:
-
-Due Date Calculator: Get your due date instantly.
-Health Tracker: Monitor your well-being effortlessly.
-Appointment Planner: Never miss a doctor's visit.
-Tech Strength Quiz: Discover your tech interests.
-Free Tech Courses: Learn coding while expecting.</p>
+            <h1>BUMP TECH <p>Tecum per graviditatem</p></h1>
+            
+            
+            <p>Introducing "BumpTech" your ultimate pregnancy app that allows you to get your due date instantly, Monitor your well-being effortlessly, Never miss a doctor's visit, Discover your tech interests and learn coding while expecting!</p>
           </div>
           </div>
         <div className="image">
