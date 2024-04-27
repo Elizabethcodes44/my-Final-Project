@@ -1,0 +1,73 @@
+@import "../../App.scss";
+.signupcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    @include mobile {
+      
+      font-size: 15px;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+      font-family: cursive;
+      @include mobile {
+        padding-left: 5px;
+        font-size: 15px;
+      }
+    }
+    .signupform {
+
+      width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      @include mobile {
+        
+        font-size: 15px;
+      }
+     
+      }
+      label {
+        font-family: monospace;
+      }
+    
+    
+    .signupform button {
+      width: 100%;
+      padding: 10px;
+      background-color: transparent;
+      border: 2px solid white;
+      color: #fff;
+      font-family: monospace;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    p{
+      margin-top: 10px;
+      font-family: cursive;
+    }
+    
+    .signupform input[type="text"],
+    .signupform input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid white;
+     font-family: monospace;
+      margin-top: 10px;
+      color: yellowgreen;
+      background-color: transparent;
+    }
+    
+    
+    
+    .signupform button:hover {
+      background-color: black;
+    }
+  }
+  
+  
+  

@@ -1,21 +1,13 @@
 import Heropage from './Heropage.jsx';
-import './Home.css'
-import Health from './health/Health.jsx';
-import Gallery from "./Gallery/Gallery.jsx"
-import About from "./About.jsx";
-import Courses from "./Courses.jsx";
+import './Home.scss'
+
 
 
 function Main() {
     return(
         <>
-        <main className='main'>
+        <main >
             <Heropage></Heropage>
-            <Health></Health>
-            <Courses></Courses>
-            <Gallery></Gallery>
-            <About></About>
-            
             
             
         </main>

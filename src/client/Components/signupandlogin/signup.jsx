@@ -1,5 +1,5 @@
 // SignUpForm.jsx
-import './signup.css';
+import './signup.scss';
 import { useState } from 'react';
 
 export default function SignUpForm({ handleSubmit, setToggleSignUp , toggleSignUp}) {
@@ -28,61 +28,62 @@ export default function SignUpForm({ handleSubmit, setToggleSignUp , toggleSignU
   return (
     <>
       <div className="signupcontainer">
-        <form className="signupform" onSubmit={handleSubmitDecorator}>
-          <h1>
-            Register on our page to get access to free tech courses. Get your
-            baby's due date, view health tips and learn about financial
-            management.
+      <h1>
+            Sign Up  on our page to discover your
+            baby's due date, view health tips and track your health!
           </h1>
+        <form className="signupform" onSubmit={handleSubmitDecorator}>
+          
           <label>
-            firstname
+            Firstname
             <input
               type="text"
               name="firstName"
-              placeholder="firstname"
+              placeholder="Input your firstname"
               value={signUp.firstName}
               onChange={handleChange}
               required
             />
           </label>
           <label>
-            lastname
+            Lastname
             <input
               type="text"
               name="lastName"
               value={signUp.lastName}
-              placeholder="lastname"
+              placeholder="Input your lastname"
               onChange={handleChange}
               required
             />
           </label>
           <label>
-            email
+            Email
             <input
               type="text"
               name="email"
-              placeholder="email"
+              placeholder="Please enter your email"
               value={signUp.email}
               onChange={handleChange}
               required
             />
           </label>
           <label>
-            password
+            Password
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Input your password"
               value={signUp.password}
               onChange={handleChange}
               required
             />
           </label>
           <button type="submit">Submit</button>
-          
+          <p>Already have an account ? click on the login button</p>
+          <button onClick ={()=> setToggleSignUp(!toggleSignUp)}>Login</button>
           
         </form>
-        <p onClick ={()=> setToggleSignUp(!toggleSignUp)}>Already have an account </p>
+        
         
       </div>
     </>

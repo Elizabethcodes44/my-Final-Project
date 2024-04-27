@@ -1,0 +1,17 @@
+header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    .header_left {
+        max-width: 1300px;
+        display: flex;
+       align-items: center;
+       justify-content: flex-end;
+        img {
+            height:85px;
+            width:85px;
+        }
+    }
+}

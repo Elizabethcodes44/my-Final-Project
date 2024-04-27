@@ -1,0 +1,53 @@
+.logincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    h2 {
+      margin-bottom: 20px;
+      font-family: cursive;
+    }
+    .loginform {
+      width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      }
+      label {
+        font-family: monospace;
+      }
+    
+    .loginform input[type="text"],
+    .loginform input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 2px solid white;
+      font-family: monospace;
+      margin-top: 10px;
+      color: yellowgreen;
+      background-color: transparent;
+    }
+    
+    .loginform button {
+      width: 100%;
+      padding: 10px;
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid white;
+      font-family: monospace;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    p{
+      margin-top: 20px;
+      font-family: cursive;
+    }
+    .loginform button:hover {
+      background-color: black;
+    }
+    
+  }
+  
+  

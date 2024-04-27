@@ -1,6 +1,6 @@
 // LogInForm.jsx
 
-import './login.css';
+import './login.scss';
 import { useState} from 'react';
 
 
@@ -25,32 +25,33 @@ export default function LogInForm({ handleSubmit,setToggleSignUp , toggleSignUp 
     <>
       <div className="logincontainer">
         <form className="loginform" onSubmit={handleSubmitDecorator}>
-          <h2>log-in</h2>
+          <h2>Log-in</h2>
           <label>
-            e-mail
+            E-mail
             <input
               type="text"
               name="email"
-              placeholder="enter your email"
+              placeholder="Please Enter your Email"
               value={logIn.email}
               onChange={handleChange}
             />
           </label>
           <label>
-            password
+            Password
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Please Enter your Password"
               value={logIn.password}
               onChange={handleChange}
             />
           </label>
           <button >Submit</button>
-        
+          <p>Yet to sign up? click on the button below</p>
+          <button onClick ={()=> setToggleSignUp(!toggleSignUp)}>Sign Up </button>
           
         </form>
-        <p onClick ={()=> setToggleSignUp(!toggleSignUp)}>Already have an account </p>
+       
       </div>
     </>
   );

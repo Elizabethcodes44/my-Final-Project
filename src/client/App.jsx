@@ -1,12 +1,17 @@
-import {useState, createContext, useEffect} from "react";
+import {useState, createContext} from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home.jsx";
-import Header from "./Components/Header.jsx";
+import About from "./Components/About.jsx";
+import Tracker from "./Components/health/Tracker.jsx";
+import Courses from "./Components/Courses.jsx";
+import Header from "./Components/NavBar/Header.jsx";
 import Footer from "./Components/Footer.jsx";
-
+import Calculator from "./Components/health/calculator.jsx";
+import Pregnancytips from "./Components/health/prenancytips.jsx";
 import LogInForm from "./Components/signupandlogin/login.jsx";
 import SignUpForm from "./Components/signupandlogin/signup.jsx";
 
-import "./App.css";
+import "./App.scss";
 
 
 const apiUrl = `https://sheleadsserverrepo-production.up.railway.app`;
@@ -64,8 +69,15 @@ const [userId, setUserId] = useState(null);
     )}
     {isLoggedIn && (
         <>
-          <Home />
-          <Footer />
+          <Routes>
+            <Route path= "/" element= {<Home/>}/>
+            <Route path= "/about" element = {<About/>} />
+            <Route path= "/calculator" element = {<Calculator/>} />
+            <Route path= "/tips" element = {<Pregnancytips/>} />
+            <Route path= "/tracker" element = {<Tracker/>} />
+            <Route path= "/courses" element = {<Courses/>} />
+          </Routes>
+           <Footer/>
         </>
     )}
       
