@@ -1,4 +1,4 @@
-import "./About.css";
+import "./About.scss";
 function About() {
   return (
     <>
@@ -6,7 +6,7 @@ function About() {
         <div>
           <h2>ABOUT US</h2>
           <p>
-            At She Leads, our mission is to empower women worldwide, with a
+            At Bump Tech, our mission is to empower women worldwide, with a
             particular focus on supporting black women in Africa to transition
             into the tech industry. We recognize the significant gender gap in
             technology and aim to address this by providing resources, support,

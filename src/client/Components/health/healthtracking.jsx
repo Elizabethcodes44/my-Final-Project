@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./healthtracking.css";
+import "./healthtracking.scss";
 
 export default function HealthTrackerForm({ handleSubmit }) {
   
@@ -41,8 +41,8 @@ export default function HealthTrackerForm({ handleSubmit }) {
   return (
     <>
       <div className="health_tracker">
-        <h1>Health tracker for pregnant women</h1>
-        <form onSubmit={handleSubmitDecorator}>
+        <h2>Health tracker for pregnant women</h2>
+        <form className= "trackerForm"onSubmit={handleSubmitDecorator}>
           <label>weight</label>
           <input
             type="number"

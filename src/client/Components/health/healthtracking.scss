@@ -1,0 +1,56 @@
+.health_tracker {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  align-items: center;
+  height: 100vh;
+  color: white;
+  
+  }
+  h2 {
+    margin-bottom: 20px;
+    font-family: cursive;
+  }
+
+    .trackerForm {
+      width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    label {
+      font-family: monospace;
+    }
+
+    
+    .health_tracker input[type="number"],
+    .health_tracker input[type="text"],
+    .health_tracker input[type ="date"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 2px solid white;
+      font-family: monospace;
+      margin-top: 10px;
+      color: yellowgreen;
+      background-color: transparent;
+
+    }
+    
+    .health_tracker button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid white;
+      font-family: monospace;
+      cursor: pointer;
+      margin-top: 20px;
+
+    }
+    
+    .health_tracker button[type="submit"]:hover {
+      background-color: black;
+    }
+  
+  
