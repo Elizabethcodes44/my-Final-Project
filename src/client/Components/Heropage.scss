@@ -1,3 +1,4 @@
+@import "../App.scss";
 .hero-page {
     overflow: hidden;
     position: relative;
@@ -12,11 +13,20 @@
         flex-direction:column ;
         justify-content: center;
         gap: 40px;
+        @include mobile {
+            height:50%;
+            width: 100%;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+           }
         h1{
             font-size: 90px;
           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
           color: white;
-          font-weight: lighter;
+          @include mobile {
+            font-size: 36px; 
+           }
           p{
             font-size:20px;
             font-style: italic;
@@ -29,7 +39,7 @@
             letter-spacing: 10px;
             font-family: monospace;
             color: white;
-            
+         
         }
       }  
     }
@@ -40,7 +50,9 @@
         right: 0; 
         padding-right: 200px;
         padding-top: 20px;
-        
+        @include mobile {
+            display: none;
+          }
         
         img {
           width: 100%px;
