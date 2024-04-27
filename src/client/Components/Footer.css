@@ -9,6 +9,7 @@
     margin-top: 50px;
     font-size: 24px; /* Font size for the heading */
     margin-bottom: 20px; /* Spacing below the heading */
+    font-family: monospace;
   }
   
   .social-icons {
