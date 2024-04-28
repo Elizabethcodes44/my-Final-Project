@@ -11,12 +11,12 @@ function About() {
             into the tech industry. We recognize the significant gender gap in
             technology and aim to address this by providing resources, support,
             and opportunities for black women to thrive in tech-related
-            fields.In addition to our commitment to women in tech, She Leads
+            fields.In addition to our commitment to women in tech, Bump Tech
             also provides valuable resources and support in women's health. We
             offer hygiene tips, pregnancy and post-care tips, and tools to track
             emotions and feelings. Our goal is to empower women to take control
             of their health and well-being, ensuring they have the knowledge and
-            support they need at every stage of their lives. At She Leads, we
+            support they need at every stage of their lives. At Bump Tech, we
             are more than just a community; we are a support system, a source of
             inspiration, and a catalyst for change. We are here for black women
             in Africa and women everywhere, supporting them on their journey to
