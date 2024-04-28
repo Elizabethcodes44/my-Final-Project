@@ -43,7 +43,7 @@ export default function HealthTrackerForm({ handleSubmit }) {
       <div className="health_tracker">
         <h2>Health tracker for pregnant women</h2>
         <form className= "trackerForm"onSubmit={handleSubmitDecorator}>
-          <label>weight</label>
+          <label>Weight</label>
           <input
             type="number"
             name="weight"
@@ -51,15 +51,15 @@ export default function HealthTrackerForm({ handleSubmit }) {
             value={tracker.weight}
             onChange={handleChange}
           />
-          <label>blood pressure</label>
+          <label>Blood Pressure</label>
           <input
             type="number"
             name="bloodPressure"
-            placeholder="bloodPressure"
+            placeholder="Check your blood pressure and input here"
             value={tracker.bloodPressure}
             onChange={handleChange}
           />
-          <label>fetal Movement</label>
+          <label>Fetal Movement</label>
           <input
             type="text"
             name="fetalMovements"
@@ -67,16 +67,16 @@ export default function HealthTrackerForm({ handleSubmit }) {
             value={tracker.fetalMovements}
             onChange={handleChange}
           />
-          <label>feelings</label>
+          <label>Feelings</label>
 
-          <input
+          <textarea rows={10}
             type="text"
             name="feelings"
             placeholder="How do you feel today?"
             value={tracker.feelings}
             onChange={handleChange}
           />
-         <label>last Appointment Date</label>
+         <label>Last Appointment Date</label>
           <input
             type="date"
             name="lastAppointment"
@@ -84,7 +84,7 @@ export default function HealthTrackerForm({ handleSubmit }) {
             value={tracker.lastAppointment}
             onChange={handleChange}
           />
-         <label>next Appointment Date</label>
+         <label>Next Appointment Date</label>
           <input
             type="date"
             name="nextAppointment"

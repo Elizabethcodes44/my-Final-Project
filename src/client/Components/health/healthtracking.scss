@@ -24,7 +24,8 @@
     
     .health_tracker input[type="number"],
     .health_tracker input[type="text"],
-    .health_tracker input[type ="date"] {
+    .health_tracker input[type ="date"] 
+    {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
@@ -35,6 +36,16 @@
       color: yellowgreen;
       background-color: transparent;
 
+    }
+    .health_tracker textarea{
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 2px solid white;
+      color: yellowgreen;
+      background-color: transparent;
+      font-family: monospace;
     }
     
     .health_tracker button[type="submit"] {
