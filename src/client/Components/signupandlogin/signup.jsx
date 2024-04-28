@@ -4,16 +4,18 @@ import { useState } from 'react';
 
 export default function SignUpForm({ handleSubmit, setToggleSignUp , toggleSignUp}) {
   
-  const [signUp, setSignUp] = useState({
+  const initialState = {
     firstName: '',
     lastName: '',
     email: '',
     password: '',
-  });
+  }
+  const [signUp, setSignUp] = useState(initialState);
 
   const handleSubmitDecorator = (e) => {
     e.preventDefault();
     handleSubmit(signUp);
+    setSignUp(initialState);
   };
 
   const handleChange = (e) => {

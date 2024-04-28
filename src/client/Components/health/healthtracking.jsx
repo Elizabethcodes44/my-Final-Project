@@ -7,22 +7,22 @@ export default function HealthTrackerForm({ handleSubmit }) {
   const userData = JSON.parse(localStorage.getItem("id"));
 
   
-  
-
-  const [tracker, setTracker] = useState({
-
+  const initialState = {
     weight: 0,
     bloodPressure: 0,
     fetalMovements: "",
     feelings: "",
    lastAppointment: "",
     nextAppointment: "",
-    userId:userData
-  });
+    userId:userData,
+  }
 
+  const [tracker, setTracker] = useState(initialState)
+ 
   const handleSubmitDecorator = (e) => {
     e.preventDefault();
     handleSubmit(tracker);
+    setTracker(initialState);
   };
 
   const handleChange = (e) => {
