@@ -30,8 +30,7 @@ export default function Calculator() {
           <h4>
             Congratulations on the anticipation of your little one! Discover
             your expected due date effortlessly by completing the form below.
-            Please keep in mind that babies can arrive up to two weeks before or
-            after the calculated due date.{" "}
+            {" "}
           </h4>
           <div className="form-container">
             <label htmlFor="lastPeriod">
@@ -50,7 +49,8 @@ export default function Calculator() {
           </div>
           {dueDate && (
             <div className="result">
-              <p>Congratulations ! Your due date is: {dueDate}</p>
+              <p>Congratulations ! Your due date is: {dueDate}.Please keep in mind that babies can arrive up to two weeks before or
+            after the calculated due date.</p>
             </div>
           )}
         </div>
