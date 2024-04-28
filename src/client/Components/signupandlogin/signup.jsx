@@ -15,7 +15,7 @@ export default function SignUpForm({ handleSubmit, setToggleSignUp , toggleSignU
   const handleSubmitDecorator = (e) => {
     e.preventDefault();
     handleSubmit(signUp);
-    setSignUp(initialState);
+    setSignUp(initialState)
   };
 
   const handleChange = (e) => {
